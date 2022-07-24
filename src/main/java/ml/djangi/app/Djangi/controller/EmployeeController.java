@@ -16,7 +16,7 @@ public class EmployeeController {
     @Autowired
     private EmployeeRepository eRepo;
 
-    @GetMapping({"/list","/"})
+    @GetMapping({"/list"})
     public ModelAndView getAllEmployees() {
         ModelAndView mav = new ModelAndView("list-employees");
         mav.addObject("employees",eRepo.findAll());
